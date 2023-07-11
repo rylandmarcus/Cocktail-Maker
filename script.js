@@ -61,18 +61,12 @@ function render() {
         ingreddiv.setAttribute('class', `ingred`)
         ingreddiv.innerText = ingredient
         let ingredPic = document.createElement('div')
+        ingredPic.setAttribute('class', 'sliver')
         ingredPic.innerHTML = `<img src="https://www.thecocktaildb.com/images/ingredients/${ingredient}-Small.png" alt="${ingredient}">`
         ingreddiv.appendChild(ingredPic)
         rightAndWrongIngred.push(ingreddiv)
         }
     }    
-    let allIngredients = document.querySelectorAll('.ingred')
-    let totalIngredients = []
-    allIngredients.forEach(ingredient=>{
-        if (ingredient.innerText) {
-            totalIngredients.push(ingredient)
-        }
-    })
     totalIngredSentence.innerHTML = `<p>There are ${rightAndWrongIngred.length} total correct ingredients in this drink! Choose the correct ingredients to make the drink...Don't pick the wrong ingredients though...You don't want your drink to be trash!</p>`
     rightAndWrongIngred.forEach(ingredient=>{
         let getWrongIngred = () =>{
@@ -87,6 +81,7 @@ function render() {
         let wrongIngredDiv = document.createElement('div')
         wrongIngredDiv.setAttribute('class', 'wrong')
         let wrongIngredPic = document.createElement('div')
+        wrongIngredPic.setAttribute('class', 'sliver')
         wrongIngredDiv.innerText = wrongIngred
         wrongIngredPic.innerHTML = `<img src="https://www.thecocktaildb.com/images/ingredients/${wrongIngred}-Small.png" alt="${wrongIngred}">`
         wrongIngredDiv.appendChild(wrongIngredPic)
@@ -107,7 +102,6 @@ function render() {
                 mixedDrink.push(div)
             }
             if(mixedDrink.length===(rightAndWrongIngred.length/2)){
-                console.log('winner');
                 $winningMessage.text(`Congratulations you did it!! That looks like one super yummy ${cocktailData.drinks[0].strDrink}!!`)
                 $name.empty()
                 $description.empty()
@@ -117,15 +111,17 @@ function render() {
                 document.querySelector(".ender").style.width = '800px'
                 $('#totalIngreds').empty()
                 $('#ingreds').empty()
-                console.log(mixedDrink);
             }
         })
     }
     let $correctIngreds = $('.ingred')
     $correctIngreds.on('click', (e) => {
-        console.log(e);
         if (e.target.localName==='img'){
             $(e.target.parentElement.parentElement).css("background-color", "green")
+            checkForWin()
+            return
+        } else if (e.target.className==='sliver'){
+            $(e.target.parentElement).css("background-color", "green")
             checkForWin()
             return
         }
@@ -139,6 +135,11 @@ function render() {
             $(e.target.parentElement.parentElement).css("background-color", "red")
             setTimeout(function(){
                 $(e.target.parentElement.parentElement).css("background-color", "aliceblue")
+            }, 300)
+        } else if (e.target.className==="sliver"){
+            $(e.target.parentElement).css("background-color", "red")
+            setTimeout(function(){
+                $(e.target.parentElement).css("background-color", "aliceblue")
             }, 300)
         }
         $(e.target).css("background-color", "red")
@@ -171,8 +172,3 @@ function render() {
         }
     })   
 }
-
-//readme
-//fix div/image glitch on the box changing color
-//e.target local name on the glitch says 'div'
-//try adding a class called sliver

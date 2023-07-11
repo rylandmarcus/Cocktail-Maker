@@ -8,22 +8,25 @@
 body {
     background-color: bisque;
     font-family: 'Playfair Display', serif;
+    color: #481D24;
 }
 
 .wrong {
-    border: 2px solid black;
+    border: 2px solid #481D24;
     border-radius: 10%;
     padding: 10px;
     width: 100px;
     font-family: 'Sigmar', cursive;
     background-color: aliceblue;
+    color: #481D24;
 }
 
 .ingred {
-    border: 2px solid black;
+    border: 2px solid #481D24;
     border-radius: 10%;
     padding: 10px;
     width: 100px;
+    color: #481D24;
     font-family: 'Sigmar', cursive;
     background-color: aliceblue;
 }
@@ -42,6 +45,9 @@ nav {
     font-family: 'Sigmar', cursive;
     font-size: 20px;
 }
+a{
+    color: #C5283D;
+}
 
 #bio{
     margin: 0 0 15px 0;
@@ -57,5 +63,12 @@ form{
 
 input{
     font-size: 20px;
+    border-radius: 5%;
 }
-
+input[type="submit"]{
+    background-color: #e8a257;
+}
+#name{
+    font-size: 30px;
+    margin: 0 0 0 0;
+}
