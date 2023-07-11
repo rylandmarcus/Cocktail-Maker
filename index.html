@@ -10,18 +10,21 @@
     <title>Cocktail Mixer</title>
 </head>
 <body>
-    <h1>Cocktail Info</h1>
-    <nav><a href="https://en.wikipedia.org/wiki/List_of_cocktails" target="_blank">List of Cocktails</a></nav>
+    <h1>Cocktail Maker!</h1>
+    <h3 id="bio">Type in the Cocktail you want to make!</h2>
+    <nav><a href="https://en.wikipedia.org/wiki/List_of_cocktails" target="_blank">List of cocktails here if you need help picking!</a></nav>
     <form>
         <input type="text" placeholder="Cocktail Name"/>
-        <input type="submit" value="Get Cocktail Info" />
+        <input type="submit" value="Let's Mix Some Ingredients!" />
       </form>
 <main>
   <h3>Cocktail Name</h3>
   <p id="name"></p>
   <h3>Description</h3>
   <p id="description"></p>
-  <h4>Ingredients</h4>
+  <div><h4>Ingredients</h4>
+    <p id="totalIngreds"></p>
+    </div>
   <div id="ingreds"></div>
   <h4>Picture</h4>
   <div id="picture"></div>
