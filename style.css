@@ -1,10 +1,61 @@
 #ingreds {
     display: grid;
     grid-template-rows: repeat(2, 200px);
-    grid-template-columns: repeat(5, 100px);
+    grid-gap: 50px;
+    justify-content: center;
 }
 
-/* body {
+body {
+    background-color: bisque;
+    font-family: 'Playfair Display', serif;
+}
+
+.wrong {
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 10px;
+    width: 100px;
+    font-family: 'Sigmar', cursive;
+    background-color: aliceblue;
+}
+
+.ingred {
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 10px;
+    width: 100px;
+    font-family: 'Sigmar', cursive;
+    background-color: aliceblue;
+}
+
+#heading {
+    font-size: 100px;
+    margin: 0 0 0 0 ;
+    font-family: 'Lobster', cursive;
+    background-color: #C5283D;
+    color: #481D24;
+}
+
+nav {
     text-align: center;
-} */
+    padding: 0 0 20px 0;
+    font-family: 'Sigmar', cursive;
+    font-size: 20px;
+}
+
+#bio{
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    padding: 15px 0px;
+    font-family: 'Sigmar', cursive;
+    background-color: #481D24;
+    color: #C5283D;
+}
+form{
+    text-align: center;
+}
+
+input{
+    font-size: 20px;
+}
 
