@@ -173,7 +173,6 @@ function render() {
 }
 
 //readme
-//github
 //fix div/image glitch on the box changing color
 //e.target local name on the glitch says 'div'
 //try adding a class called sliver
