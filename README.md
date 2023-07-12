@@ -5,7 +5,7 @@ Project 1 - HTML/JS/CSS Cocktail Making Game
 This is a game using HTML/JS/CSS where cocktail data is obtained from an API and you need to select the correct ingredients to make the cocktail! If you select the wrong ingredients then you will lose!
 
 ## Approach Taken
-I started off by making sure I could get all the information I needed from my cocktail API. Then I displayed all the ingredients on the screen and shuffled them up with random incorrect ingredients. Once I was able to display all the ingredients both right and wrong, then I could add in the game element in order to select the correct ingredients to make the drink. All that was left was to establish if the user won or lost and then display the results.
+I started off by making sure I could get all the information I needed from my cocktail API. Then I displayed all the ingredients on the screen and shuffled them up with random incorrect ingredients. Once I was able to display all the ingredients both right and wrong, then I could add in the game element in order to select the correct ingredients to make the drink. All that was left was to establish if the user won or lost and then display the results!
 
 ## Features
 * A search bar that can accept any cocktail you can think of
